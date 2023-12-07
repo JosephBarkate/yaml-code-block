@@ -1,7 +1,7 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
 
-import YamlCodeBlock, { YamlCodeBlockProps } from '../YamlCodeBlock';
+import YamlCodeBlock, { YamlCodeBlockProps } from '../YamlCodeBlock'
 
 export default {
   title: 'YamlCodeBlock',
@@ -10,26 +10,47 @@ export default {
     yamlData: { control: 'text' },
     showLineNumbers: { control: 'boolean' },
     font: { control: 'text' },
-    backgroundColor: { control: 'color' },
-  },
-} as Meta;
+    backgroundColor: { control: 'color' }
+  }
+} as Meta
 
-const Template: Story<YamlCodeBlockProps> = (args) => <YamlCodeBlock {...args} />;
+const exampleYAML = `   doe: "a deer, a female deer"
+    ray: "a drop of golden sun"
+    pi: 3.14159
+    xmas: true
+    french-hens: 3
+    calling-birds:
+    - huey
+    - dewey
+    - louie
+    - fred
+    xmas-fifth-day:
+    calling-birds: four
+    french-hens: 3
+    golden-rings: 5
+    partridges:
+        count: 1
+        location: "a pear tree"
+    turtle-doves: two`
 
-export const Default = Template.bind({});
+const Template: Story<YamlCodeBlockProps> = (args) => (
+  <YamlCodeBlock {...args} />
+)
+
+export const Default = Template.bind({})
 Default.args = {
-  yamlData: 'Your YAML data goes here...',
-};
+  yamlData: exampleYAML
+}
 
-export const WithLineNumbers = Template.bind({});
+export const WithLineNumbers = Template.bind({})
 WithLineNumbers.args = {
-  yamlData: 'Your YAML data goes here...',
-  showLineNumbers: true,
-};
+  yamlData: exampleYAML,
+  showLineNumbers: true
+}
 
-export const CustomStyle = Template.bind({});
+export const CustomStyle = Template.bind({})
 CustomStyle.args = {
-  yamlData: 'Your YAML data goes here...',
+  yamlData: exampleYAML,
   font: 'Courier New',
-  backgroundColor: '#333',
-};
+  backgroundColor: '#333'
+}

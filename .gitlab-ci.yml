@@ -1,0 +1,17 @@
+image: node:latest
+
+stages:
+  - deploy
+
+deploy_storybook:
+  stage: deploy
+  only:
+    - master
+  script:
+    - npm install
+    - npm run build-storybook
+    - apt-get update -qy
+    - apt-get install -y git
+    - git config --global user.email "josephbarkate@gmail.com"
+    - git config --global user.name "Joe Barkate"
+    - npx gh-pages -d storybook-static -t true -r https://github.com/josephbarkate/yaml-code-block.git -b gh-pages -o
