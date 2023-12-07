@@ -52,12 +52,22 @@ npm install --save yaml-code-block
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'yaml-code-block'
-import 'yaml-code-block/dist/index.css'
-
+import YamlCodeBlock, { YamlCodeBlockProps } from 'YamlCodeBlock'
+yamlData,
+  (showLineNumbers = false),
+  (font = 'monospace'),
+  (fontColor = '#3f515f'),
+  (backgroundColor = '#f0f0f0')
 class Example extends Component {
+  inputProps: YamlCodeBlockProps = {
+    yamlData = myData,
+    showLineNumbers = true, // Optional
+    font = 'monospace', // Optional
+    fontColor = '#3f515f', // Optional
+    backgroundColor = '#f0f0f0' // Optional
+  }
   render() {
-    return <MyComponent />
+    return <YamlCodeBlock {...inputProps} />
   }
 }
 ```
