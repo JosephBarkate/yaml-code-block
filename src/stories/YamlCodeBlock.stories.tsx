@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { YamlCodeBlock, YamlCodeBlockProps } from '../YamlCodeBlock';
+import YamlCodeBlock, { YamlCodeBlockProps } from '../YamlCodeBlock';
 
 export default {
   title: 'YamlCodeBlock',

@@ -1,7 +1,7 @@
 {
   "name": "yaml-code-block",
   "version": "1.0.0",
-  "description": "Package that neatly displays yml in a code block",
+  "description": "Lightweight package that neatly displays yml in a code block",
   "author": "JosephBarkate",
   "license": "MIT",
   "repository": "JosephBarkate/yaml-code-block",
