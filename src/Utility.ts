@@ -8,20 +8,6 @@ export const isJsonString = (str: string) => {
   }
 }
 
-// Convert JSON stringified YAML back to YAML
-export const formatData = (data: string) => {
-  if (isJsonString(data)) {
-    try {
-      const _jsonData = JSON.parse(data)
-      return // jsYaml.dump(jsonData)
-    } catch (e) {
-      console.error('Error parsing JSON:', e)
-      return data // Return original data if parsing fails
-    }
-  }
-  return data // Return original data if it's not JSON
-}
-
 // Format JSON string for display
 export const formatJsonForDisplay = (jsonStr: string) => {
   try {
