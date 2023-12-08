@@ -1,0 +1,40 @@
+.yaml-code-container {
+  display: flex;
+}
+
+.line-numbers {
+  flex-shrink: 0; /* Prevent the line numbers from shrinking */
+  user-select: none; /* Prevent selection */
+  overflow: hidden;
+  border-right: 1px solid #ccc; /* Fine gray line */
+  padding-right: 10px;
+  /* Add other styles such as padding, margin, background, etc. */
+}
+
+.yaml-code-block {
+  flex-grow: 0; /* Allow the code block to take up remaining space */
+  margin: 0;
+  padding-left: 10px;
+  white-space: pre-wrap;
+  /* Your existing styles for the yaml-code-block */
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.line-number {
+  user-select: none;
+  /* other styles for line numbers */
+}
+
+.line-number,
+.code-line {
+  line-height: 1.5; /* Example line height, adjust as needed */
+  margin: 0;
+  padding: 0 5px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
